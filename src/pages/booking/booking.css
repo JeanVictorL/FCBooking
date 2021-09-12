@@ -1,87 +1,130 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 
 /* Menu */
 
 .headerContent {
-  padding: 15px;
-  background: #C4C4C4;
+    padding: 15px 150px;
+    background: #F24E1E;
 }
 
 .headerContent .menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-
-  width: 100%;
+    display: flex;
+    width: 100%;
 }
+
 
 /* Itens menu */
 
 .headerContent .menu .menuLinks {
-  position: relative;
+    position: relative;
+    align-items: left;
 }
 
 .headerContent .menu .menuLinks ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  list-style: none;
-  width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    width: 100%;
 }
 
 .headerContent .menu .menuLinks ul li {
-  padding: 5px 100px 5px 5px;
+    padding: 5px 100px 5px 5px;
 }
 
 @media (max-width: 900px) {
-  .headerContent .menu .menuLinks ul li {
-      padding: 0px 15px;
-  }
+    .headerContent .menu .menuLinks ul li {
+        padding: 0px 15px;
+    }
 }
 
 .headerContent .menu .menuLinks ul li .dpMenu a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
+
 /* dp menu links */
+
 .headerContent .menu .menuLinks .dpMenu {
-  display: none;
-  left: 0;
-
-  position: absolute;
-
-  padding: 5px;
-  width: 150px;
-  background: #C4C4C4;
-  border-radius: 10px;
+    display: none;
+    left: 0;
+    position: absolute;
+    padding: 5px;
+    width: 150px;
+    background: #C4C4C4;
+    border-radius: 10px;
 }
 
 .headerContent .menu .menuLinks li:hover .dpMenu {
-  display: block;
+    display: block;
 }
 
 .headerContent .menu .menuLinks .dpMenu li a {
-  display: block;
-  color: #F24E1E;
-  font-weight: 600;
+    display: block;
+    color: #F24E1E;
+    font-weight: 600;
 }
+
 
 /* botões menu */
 
 .headerContent .menu .menuLinks .botao,
 .headerContent .menu .menuLinks .botaoSair {
-  text-decoration: none;
+    text-decoration: none;
+    color: #fff;
+    background: #F24E1E;
+    cursor: pointer;
+    padding: 13px 15px;
+    border: none;
+    border-radius: 50%;
+}
 
-  color: #fff;
-  background: #F24E1E;
 
-  cursor: pointer;
-  padding: 13px 15px;
+/* parte de campos a serem preenchidos */
 
-  border: none;
-  border-radius: 50%;
+.campos {
+    text-align: center;
+}
+
+h1 {
+    color: #F24E1E;
+    font-size: 40px;
+    padding-top: 20px;
+}
+
+.porcentagem {
+    border-style: solid;
+    margin-bottom: 25px;
+    padding: 8px;
+    width: 25%;
+}
+
+.inputDia {
+    border: none;
+    margin-bottom: 25px;
+    padding: 8px;
+    border-bottom: solid 2px var(--color-font);
+    background: transparent;
+    width: 25%;
+    font-family: 'Montserrat' sans-serif;
+    font-size: 20px;
+    margin-top: 10%;
+    transition: .5s ease-in-out;
+}
+
+.Cadastro {
+    text-transform: uppercase;
+    background: #404099;
+    padding: 15px 100px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: none;
+    font-size: 25px;
+    color: white;
 }
