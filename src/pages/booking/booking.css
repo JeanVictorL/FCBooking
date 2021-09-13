@@ -100,6 +100,7 @@ h1 {
 
 h2 {
     margin-top: 10px;
+<<<<<<< HEAD
 }
 
 h3 {
@@ -124,22 +125,54 @@ h4 {
     width: 50px;
     font-family: 'Montserrat';
     margin-right: 5%;
+=======
+}
+
+h3 {
+    margin-top: 10px;
+}
+
+h4 {
+    margin-top: 10px;
+}
+
+.porcentagem {
+    border-style: solid;
+    margin-bottom: 25px;
+    padding: 8px;
+    width: 25%;
+}
+
+.dia {
+    box-sizing: border-box;
+    margin-top: 10px;
+    width: 50px;
+>>>>>>> main
 }
 
 .mes {
     box-sizing: border-box;
+<<<<<<< HEAD
     margin-top: 15px;
     width: 150px;
     font-family: 'Montserrat';
     margin-right: 5%;
+=======
+    margin-top: 10px;
+    width: 150px;
+    font-family: 'Montserrat';
+>>>>>>> main
 }
 
 .barrinha {
     margin-top: 25px;
+<<<<<<< HEAD
 }
 
 .progress {
     background-color: #F24E1E;
+=======
+>>>>>>> main
 }
 
 .Cadastro {
@@ -154,7 +187,11 @@ h4 {
     color: white;
 }
 
+<<<<<<< HEAD
 .voltar a {
     font-size: 20px;
     color: #404099;
 }
+=======
+.progress {}
+>>>>>>> main
