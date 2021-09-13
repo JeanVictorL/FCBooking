@@ -89,7 +89,7 @@
 
 .campos {
     text-align: center;
-    font: 'Montserrat';
+    font-family: 'Montserrat';
 }
 
 h1 {
@@ -98,24 +98,48 @@ h1 {
     padding-top: 20px;
 }
 
-.porcentagem {
-    border-style: solid;
-    margin-bottom: 25px;
-    padding: 8px;
-    width: 25%;
+h2 {
+    margin-top: 10px;
 }
 
-.inputDia {
-    border: none;
-    margin-bottom: 25px;
-    padding: 8px;
-    border-bottom: solid 2px var(--color-font);
-    background: transparent;
-    width: 25%;
-    font-family: 'Montserrat' sans-serif;
-    font-size: 20px;
-    margin-top: 10%;
-    transition: .5s ease-in-out;
+h3 {
+    margin-top: 10px;
+}
+
+h4 {
+    margin-top: 10px;
+}
+
+.escolha {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: -100%;
+    margin-top: 15px;
+}
+
+.dia {
+    box-sizing: border-box;
+    margin-top: 15px;
+    width: 50px;
+    font-family: 'Montserrat';
+    margin-right: 5%;
+}
+
+.mes {
+    box-sizing: border-box;
+    margin-top: 15px;
+    width: 150px;
+    font-family: 'Montserrat';
+    margin-right: 5%;
+}
+
+.barrinha {
+    margin-top: 25px;
+}
+
+.progress {
+    background-color: #F24E1E;
 }
 
 .Cadastro {
@@ -130,6 +154,7 @@ h1 {
     color: white;
 }
 
-.progress {
-    background-color: #F24E1E;
+.voltar a {
+    font-size: 20px;
+    color: #404099;
 }
