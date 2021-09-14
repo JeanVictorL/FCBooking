@@ -1,87 +1,197 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 
 /* Menu */
 
 .headerContent {
-  padding: 15px;
-  background: #C4C4C4;
+    padding: 15px 150px;
+    background: #F24E1E;
 }
 
 .headerContent .menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-
-  width: 100%;
+    display: flex;
+    width: 100%;
 }
+
 
 /* Itens menu */
 
 .headerContent .menu .menuLinks {
-  position: relative;
+    position: relative;
+    align-items: left;
 }
 
 .headerContent .menu .menuLinks ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  list-style: none;
-  width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    width: 100%;
 }
 
 .headerContent .menu .menuLinks ul li {
-  padding: 5px 100px 5px 5px;
+    padding: 5px 100px 5px 5px;
 }
 
 @media (max-width: 900px) {
-  .headerContent .menu .menuLinks ul li {
-      padding: 0px 15px;
-  }
+    .headerContent .menu .menuLinks ul li {
+        padding: 0px 15px;
+    }
 }
 
 .headerContent .menu .menuLinks ul li .dpMenu a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
+
 /* dp menu links */
+
 .headerContent .menu .menuLinks .dpMenu {
-  display: none;
-  left: 0;
-
-  position: absolute;
-
-  padding: 5px;
-  width: 150px;
-  background: #C4C4C4;
-  border-radius: 10px;
+    display: none;
+    left: 0;
+    position: absolute;
+    padding: 5px;
+    width: 150px;
+    background: #C4C4C4;
+    border-radius: 10px;
 }
 
 .headerContent .menu .menuLinks li:hover .dpMenu {
-  display: block;
+    display: block;
 }
 
 .headerContent .menu .menuLinks .dpMenu li a {
-  display: block;
-  color: #F24E1E;
-  font-weight: 600;
+    display: block;
+    color: #F24E1E;
+    font-weight: 600;
 }
+
 
 /* botões menu */
 
 .headerContent .menu .menuLinks .botao,
 .headerContent .menu .menuLinks .botaoSair {
-  text-decoration: none;
-
-  color: #fff;
-  background: #F24E1E;
-
-  cursor: pointer;
-  padding: 13px 15px;
-
-  border: none;
-  border-radius: 50%;
+    text-decoration: none;
+    color: #fff;
+    background: #F24E1E;
+    cursor: pointer;
+    padding: 13px 15px;
+    border: none;
+    border-radius: 50%;
 }
+
+
+/* parte de campos a serem preenchidos */
+
+.campos {
+    text-align: center;
+    font-family: 'Montserrat';
+}
+
+h1 {
+    color: #F24E1E;
+    font-size: 40px;
+    padding-top: 20px;
+}
+
+h2 {
+    margin-top: 10px;
+<<<<<<< HEAD
+}
+
+h3 {
+    margin-top: 10px;
+}
+
+h4 {
+    margin-top: 10px;
+}
+
+.escolha {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: -100%;
+    margin-top: 15px;
+}
+
+.dia {
+    box-sizing: border-box;
+    margin-top: 15px;
+    width: 50px;
+    font-family: 'Montserrat';
+    margin-right: 5%;
+=======
+}
+
+h3 {
+    margin-top: 10px;
+}
+
+h4 {
+    margin-top: 10px;
+}
+
+.porcentagem {
+    border-style: solid;
+    margin-bottom: 25px;
+    padding: 8px;
+    width: 25%;
+}
+
+.dia {
+    box-sizing: border-box;
+    margin-top: 10px;
+    width: 50px;
+>>>>>>> main
+}
+
+.mes {
+    box-sizing: border-box;
+<<<<<<< HEAD
+    margin-top: 15px;
+    width: 150px;
+    font-family: 'Montserrat';
+    margin-right: 5%;
+=======
+    margin-top: 10px;
+    width: 150px;
+    font-family: 'Montserrat';
+>>>>>>> main
+}
+
+.barrinha {
+    margin-top: 25px;
+<<<<<<< HEAD
+}
+
+.progress {
+    background-color: #F24E1E;
+=======
+>>>>>>> main
+}
+
+.Cadastro {
+    text-transform: uppercase;
+    background: #404099;
+    padding: 15px 100px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: none;
+    font-size: 25px;
+    color: white;
+}
+
+<<<<<<< HEAD
+.voltar a {
+    font-size: 20px;
+    color: #404099;
+}
+=======
+.progress {}
+>>>>>>> main
