@@ -1,6 +1,8 @@
 const express = require('express');
+const path = require('path');
 const { initializeApp } = require('firebase/app');
 const { getDatabase, set, ref, get, child } = require('firebase/database');
+
 // const  { getAnalytics } = require("firebase/analytics");
 
 const firebaseConfig = {
@@ -20,10 +22,11 @@ const firebaseApp = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(firebaseApp);
 
 const app = express();
+const router = express.Router();
 
 app.use(express.json());
 
-app.use(express.static(__dirname + '/pages'));
+app.use(express.static(path.join(__dirname, 'pages')));
 
 const PORT = 3000;
 
@@ -68,7 +71,15 @@ async function getPercent() {
     };
 }
 
-//response.sendfile 
+//rotas
+
+app.get('/login', function(req, res) {
+    res.sendFile('/login');
+});
+
+app.get('/office', function(req,res){
+    res.sendFile('/office')
+});
 
 //recebe as quantidades da matriz
 app.get('/db/Matriz', async (request, response) => {

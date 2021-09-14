@@ -2,6 +2,12 @@ const proximo = document.querySelector('#btnProx');
 const sp =  document.querySelector("#percentSP")
 const st =  document.querySelector("#percentST")
 
+async function get() {
+    let a = await fetch('../db/Matriz');
+    console.log(a.json());
+}
+
+get()
 //sp.innerHTML = "testando se ta rolando"
 //st.innerHTML = "testando se ta rolando"
 
