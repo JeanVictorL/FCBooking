@@ -7,7 +7,7 @@ enviar.addEventListener('click', () => {
     const nome = document.querySelector('.inputNome');
     const valorNome = nome.value;
     if (valorNome == "") {
-        alert("Digite seu nome")
+        alert("Digite seu nome");
     } else {
         console.log(valorNome);
     }
@@ -16,7 +16,7 @@ enviar.addEventListener('click', () => {
     const email = document.querySelector('#emailAutenticacao');
     const valorEmail = email.value;
     if (valorEmail == "") {
-        alert("Digite seu email")
+        alert("Digite seu email");
     } else {
         console.log(valorEmail);
     }
@@ -24,5 +24,6 @@ enviar.addEventListener('click', () => {
     if (valorEmail != "" && valorNome != "") {
         //redirecionamento
         console.log("redirecionamento efetuado")
+        window.location.href = '/office';
     }
 });

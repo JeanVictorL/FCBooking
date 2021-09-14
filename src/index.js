@@ -1,6 +1,8 @@
 const express = require('express');
+const path = require('path');
 const { initializeApp } = require('firebase/app');
 const { getDatabase, set, ref, get, child } = require('firebase/database');
+
 // const  { getAnalytics } = require("firebase/analytics");
 
 const firebaseConfig = {
@@ -20,21 +22,15 @@ const firebaseApp = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(firebaseApp);
 
 const app = express();
+const router = express.Router();
 
 app.use(express.json());
+
+app.use(express.static(path.join(__dirname, 'pages')));
 
 const PORT = 3000;
 
 app.listen(PORT, () => console.log(`Server started at ${PORT}...`));
-
-//remake
-function writeUserData(userId, name, email) {
-    const db = getDatabase();
-    set(ref(db, '/user' + userId), {
-        username: name,
-        email: email,
-    });
-}
 
 async function readData(office) {
     const dbRef = ref(getDatabase());
@@ -75,13 +71,38 @@ async function getPercent() {
     };
 }
 
+//rotas
+
+app.get('/inicio', function(req, res) {
+    res.sendFile('/inicio');
+});
+
+app.get('/login', function(req, res) {
+    res.sendFile('/login');
+});
+
+app.get('/office', function(req,res){
+    res.sendFile('/office')
+});
+
+app.get('/booking', function(req,res){
+    res.sendFile('/booking')
+});
+
+app.get('/success', function(req,res){
+    res.sendFile('/success')
+});
+
 //recebe as quantidades da matriz
 app.get('/db/Matriz', async (request, response) => {
     const snap = await readData("Matriz");
     const percent = await getPercent();
     const available = snap.Total * (percent / 100) - snap.Atual;
-    const data = [available, snap.Atual];
-    response.json(data);
+    const data = {
+        "total":snap.Total, 
+        "disponivel": available, 
+        "atual": snap.Atual};
+    return response.json(data);
 });
 
 //recebe as quantidades de santos
@@ -89,8 +110,11 @@ app.get('/db/Santos', async (request, response) => {
     const snap = await readData("Santos");
     const percent = await getPercent();
     const available = snap.Total * (percent / 100) - snap.Atual;
-    const data = [available, snap.Atual];
-    response.json(data);
+    const data = {
+        "total":snap.Total, 
+        "disponivel": available, 
+        "atual": snap.Atual};
+    return response.json(data);
 });
 
 app.post('/db/Matriz', async (request, response) => {

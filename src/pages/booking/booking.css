@@ -100,32 +100,6 @@ h1 {
 
 h2 {
     margin-top: 10px;
-<<<<<<< HEAD
-}
-
-h3 {
-    margin-top: 10px;
-}
-
-h4 {
-    margin-top: 10px;
-}
-
-.escolha {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    width: -100%;
-    margin-top: 15px;
-}
-
-.dia {
-    box-sizing: border-box;
-    margin-top: 15px;
-    width: 50px;
-    font-family: 'Montserrat';
-    margin-right: 5%;
-=======
 }
 
 h3 {
@@ -147,32 +121,17 @@ h4 {
     box-sizing: border-box;
     margin-top: 10px;
     width: 50px;
->>>>>>> main
 }
 
 .mes {
     box-sizing: border-box;
-<<<<<<< HEAD
-    margin-top: 15px;
-    width: 150px;
-    font-family: 'Montserrat';
-    margin-right: 5%;
-=======
     margin-top: 10px;
     width: 150px;
     font-family: 'Montserrat';
->>>>>>> main
 }
 
 .barrinha {
     margin-top: 25px;
-<<<<<<< HEAD
-}
-
-.progress {
-    background-color: #F24E1E;
-=======
->>>>>>> main
 }
 
 .Cadastro {
@@ -187,11 +146,8 @@ h4 {
     color: white;
 }
 
-<<<<<<< HEAD
-.voltar a {
-    font-size: 20px;
-    color: #404099;
+/*
+.progress {
+
 }
-=======
-.progress {}
->>>>>>> main
+*/

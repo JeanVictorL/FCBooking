@@ -1,7 +1,8 @@
 {
   "dependencies": {
+    "chart.js": "^3.5.1",
     "express": "^4.17.1",
-    "firebase": "^9.0.1"
+    "firebase": "^9.0.2"
   },
   "scripts": {
     "htmlhint": "htmlhint dist/*.html ",
