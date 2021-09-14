@@ -73,6 +73,10 @@ async function getPercent() {
 
 //rotas
 
+app.get('/inicio', function(req, res) {
+    res.sendFile('/inicio');
+});
+
 app.get('/login', function(req, res) {
     res.sendFile('/login');
 });
@@ -81,12 +85,23 @@ app.get('/office', function(req,res){
     res.sendFile('/office')
 });
 
+app.get('/booking', function(req,res){
+    res.sendFile('/booking')
+});
+
+app.get('/success', function(req,res){
+    res.sendFile('/success')
+});
+
 //recebe as quantidades da matriz
 app.get('/db/Matriz', async (request, response) => {
     const snap = await readData("Matriz");
     const percent = await getPercent();
     const available = snap.Total * (percent / 100) - snap.Atual;
-    const data = [available, snap.Atual, snap.Total];
+    const data = {
+        "total":snap.Total, 
+        "disponivel": available, 
+        "atual": snap.Atual};
     return response.json(data);
 });
 
@@ -95,8 +110,11 @@ app.get('/db/Santos', async (request, response) => {
     const snap = await readData("Santos");
     const percent = await getPercent();
     const available = snap.Total * (percent / 100) - snap.Atual;
-    const data = [available, snap.Atual, snap.Total];
-    response.json(data);
+    const data = {
+        "total":snap.Total, 
+        "disponivel": available, 
+        "atual": snap.Atual};
+    return response.json(data);
 });
 
 app.post('/db/Matriz', async (request, response) => {
