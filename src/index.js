@@ -125,8 +125,9 @@ app.post('/db/Matriz', async (request, response) => {
     const available = snap.Total * (percent / 100) - snap.Atual;
     if (available > 0) {
         increment(which, snap);
-        snap = await readData(which);
-        response.json(["Success", snap.Atual]);
+        response.json({
+            message: 'Success'
+        });
     } else {
         response.json("error");
     }
@@ -140,8 +141,9 @@ app.post('/db/Santos', async (request, response) => {
     const available = snap.Total * (percent / 100) - snap.Atual;
     if (available > 0) {
         increment(which, snap);
-        snap = await readData(which);
-        response.json(["Success", snap.Atual]);
+        response.json({
+            message: 'Success'
+        });
     } else {
         response.json("error");
     }
